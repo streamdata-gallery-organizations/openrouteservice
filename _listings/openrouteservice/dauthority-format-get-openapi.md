@@ -1,0 +1,156 @@
+---
+swagger: "2.0"
+x-collection-name: OpenRouteService
+x-complete: 0
+info:
+  title: AP Metadata Services Taxonomy Information
+  description: Returns the taxonomy information for the specified authority and the
+    specified format.
+  version: v1
+host: cv.ap.org
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  api/cm/:
+    get:
+      summary: Change Log
+      description: Returns a list of changes to the AP vocabulary terms according
+        to the specified criteria.
+      operationId: getApiCm
+      x-api-path-slug: apicm-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: API Key
+      - in: query
+        name: authority
+        description: authority
+      - in: query
+        name: enddate
+        description: This parameter can be used in conjunction with the startdate
+          parameter to  specify a date range
+      - in: query
+        name: format
+        description: 'Specifies the output format: comma-separated values (CSV) or
+          XML'
+      - in: query
+        name: lastversion
+        description: Returns all change logs since (but not including) the specified
+          version  number, in the format {AuthorityVersion}
+      - in: query
+        name: startdate
+        description: eturns all change logs since (and including) the specified date
+      - in: query
+        name: version
+        description: Returns the change log for the specified version number, in the
+          format  {AuthorityVersion}
+      responses:
+        200:
+          description: OK
+      tags:
+      - Change
+      - Log
+  c/{class}.{format}:
+    get:
+      summary: Ontology Definition
+      description: Returns the AP ontology definition for the specified AP property
+        or class and the specified format.
+      operationId: getCClass.Format
+      x-api-path-slug: cclass-format-get
+      parameters:
+      - in: query
+        name: apikey
+        description: API Key
+      - in: path
+        name: class
+        description: The name of an AP property or class
+      - in: path
+        name: format
+        description: The format of the returned AP ontology data
+      responses:
+        200:
+          description: OK
+      tags:
+      - Ontology
+      - Definition
+  d/DeprecatedCompany.{format}:
+    get:
+      summary: DeprecatedCompany
+      description: Returns a list of deprecated AP vocabulary terms in the specified
+        format for the AP Company authority  or for the other four AP authorities.
+      operationId: getDDeprecatedcompany.Format
+      x-api-path-slug: ddeprecatedcompany-format-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: API Key
+      - in: path
+        name: format
+        description: The format of the returned taxonomy data (RDF/XML, RDF/TTL or  NewsML-G2)
+      responses:
+        200:
+          description: OK
+      tags:
+      - DeprecatedCompany
+  d/DeprecatedTerm.{format}:
+    get:
+      summary: Deprecated Terms
+      description: Returns a list of deprecated AP vocabulary terms in the specified
+        format for the AP Company authority  or for the other four AP authorities.
+      operationId: getDDeprecatedterm.Format
+      x-api-path-slug: ddeprecatedterm-format-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: API Key
+      - in: path
+        name: format
+        description: The format of the returned taxonomy data (RDF/XML, RDF/TTL or  NewsML-G2)
+      responses:
+        200:
+          description: OK
+      tags:
+      - Deprecated
+      - Terms
+  d/{authority}.{format}:
+    get:
+      summary: Taxonomy Information
+      description: Returns the taxonomy information for the specified authority and
+        the specified format.
+      operationId: getDAuthority.Format
+      x-api-path-slug: dauthority-format-get
+      parameters:
+      - in: query
+        name: apikey
+        description: API Key
+      - in: path
+        name: authority
+        description: The name of a classification authority (not case-sensitive)
+      - in: path
+        name: format
+        description: The format of the returned taxonomy data
+      responses:
+        200:
+          description: OK
+      tags:
+      - Taxonomy
+      - Information
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
