@@ -15,6 +15,52 @@ produces:
 consumes:
 - application/json
 paths:
+  categories.svc/:
+    get:
+      summary: Categories
+      description: Returns a list of available AP Breaking News categories, including
+        category IDs.
+      operationId: getCategories.svc
+      x-api-path-slug: categories-svc-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: API Key
+      responses:
+        200:
+          description: OK
+      tags:
+      - Categories
+  categories.svc/{categoryID}/:
+    get:
+      summary: Category News
+      description: Returns the latest content for a specific category. Depending on
+        the specified parameters, returns  either the full story for each headline
+        and/or the headlines linked to web pages with the full stories.
+      operationId: getCategories.svcCategory
+      x-api-path-slug: categories-svccategoryid-get
+      parameters:
+      - in: query
+        name: apiKey
+        description: API Key
+      - in: query
+        name: categoryID
+        description: The ID of the AP Breaking News category
+      - in: query
+        name: contentOption
+        description: Specifies whether to return full story content in the response
+      - in: query
+        name: count
+        description: The number of content items to be returned
+      - in: query
+        name: mediaOption
+        description: Includes related photos in the response
+      responses:
+        200:
+          description: OK
+      tags:
+      - Category
+      - News
   item/{id}/:
     get:
       summary: Get Item

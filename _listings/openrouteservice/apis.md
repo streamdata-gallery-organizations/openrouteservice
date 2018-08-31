@@ -6,8 +6,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/882-openro
 x-kinRank: "7"
 x-alexaRank: "6266"
 tags: OpenRouteService
-created: "2018-08-26"
-modified: "2018-08-26"
+created: "2018-08-30"
+modified: "2018-08-30"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/apis.md
 specificationVersion: "0.14"
 apis:
@@ -178,6 +178,21 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/idguid-format-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/idguid-format-get-openapi.md
+- name: AP Metadata Services - Tags
+  x-api-slug: tags-post
+  description: Returns the set of AP standardized vocabulary terms that apply to the
+    submitted news content. The  output can be limited to one or more authorities
+    specified in the request; for example, you can choose  to apply only AP Organization,
+    AP Subject and AP Geography tags to the submitted content, but not  AP Person
+    or AP Company.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/882-openrouteservice.jpg
+  humanURL: http://wiki.openstreetmap.org/wiki/OpenRouteService#ORS_.22API.22
+  baseURL: https://cv.ap.org//
+  tags: Bicycle, Routes, Directions, Technology, SaaS, Routes, Routes, General Data,
+    Relative Data, Service API, Locations, Maps
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/tags-post-openapi.md
 x-common:
 - type: x-website
   url: http://wiki.openstreetmap.org/wiki/OpenRouteService#ORS_.22API.22

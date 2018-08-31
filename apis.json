@@ -1,0 +1,33 @@
+{
+	"name": "Streadata.io API Gallery - OpenRouteService",
+	"description": "This is a repository of openrouteservice APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/openrouteservice.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-30",
+	"url": "http://openrouteservice.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "OpenRouteService",
+			"x-api-slug": "openrouteservice",
+			"description": "OpenStreetMap is the free wiki world map.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/882-openrouteservice.jpg",
+			"humanURL": "http://wiki.openstreetmap.org/wiki/OpenRouteService#ORS_.22API.22",
+			"baseURL": "https://cv.ap.org//",
+			"tags": "OpenRouteService",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "OpenRouteService",
+	"include": [
+		{
+			"name": "OpenRouteService",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/openrouteservice/master/_listings/openrouteservice/apis.yaml"
+		}
+	]
+}
